@@ -78,8 +78,18 @@ button {
 	font-size: 14px;
 }
 
-button:hoover {
-	font-style: italic;
+
+
+button:hover {
+	animation-name: transition;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes transition {
+	100% {
+		background-color: #583087; 
+	}
 }
 
 .cancel {
@@ -88,14 +98,61 @@ button:hoover {
 }
 
 
+/*mobile coding*/
+
+.orderingMobile {
+	position: relative;
+	padding:3%;
+	width: 70%;
+	margin: 0 auto 0 auto;
+}
+
+.imageMobile {
+	width: 100%;
+}
+
+.contentMobile {
+	position: relative;
+	background-color: #FFFFFF;
+	padding: 5%;
+	text-align: center;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.cancelMobile {
+	padding-top: 10%;
+}
+
+#buttonMobile {
+	width: 70%;
+}
+
+.containterPriceMobile {
+	background-color: hsl(224, 23%, 95%);
+	border-radius: 10px;
+	padding: 5%;
+	width: 50%;
+	margin: 0 auto 0 auto;
+}
+
+
+
+/* Phone */
+
 @media (min-width: 100px) and (max-width: 960px) { 
+	
+
+	.image {
+		display: none;
+	}
 	
 	.containerPrice {
 		display: none;
 	}
 
-	.containerPriceMobile {
-		
+	.ordering{
+		display: none;
 	}
 	
 	.mobileIcon {
@@ -114,6 +171,8 @@ button:hoover {
 	
 }
 
+/*TABLET AND DESKTOP*/
+
 @media (min-width: 961px) { 
 	#mobileIcon {
 		display: none;
@@ -124,5 +183,12 @@ button:hoover {
 	.containterPriceMobile {
 		display: none;
 	}
+	.imageMobile {
+		display: none;
+	}
+	.orderingMobile {
+		display: none;
+	}
+	
 }
 
